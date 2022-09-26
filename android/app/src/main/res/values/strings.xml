@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Capacitor Todo App</string>
+    <string name="title_activity_main">Capacitor Todo App</string>
+    <string name="package_name">com.khangnd.todoapp</string>
+    <string name="custom_url_scheme">com.khangnd.todoapp</string>
+</resources>

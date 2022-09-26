@@ -1,3 +1,4 @@
+import { Toast } from '@capacitor/toast';
 import Status from './status.js';
 
 const status = new Status();
@@ -75,11 +76,13 @@ export default class Tasks {
       index: this.tasksArray.length,
     });
     this.saveAndRender();
+    Toast.show({ text: `Added ${value}` })
   }
 
   update = (value, index) => {
     this.tasksArray[index].description = value;
     this.saveAndRender();
+    Toast.show({ text: `Updated ${value}` })
   }
 
   remove = (index) => {
@@ -88,5 +91,6 @@ export default class Tasks {
       task.index = index;
     });
     this.saveAndRender();
+    Toast.show({ text: `Removed ${value}` })
   }
 }

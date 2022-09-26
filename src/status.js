@@ -1,3 +1,5 @@
+import { Haptics } from '@capacitor/haptics';
+
 export default class Status {
   // complete tasks and update task status
   completeTask = (array) => {
@@ -11,6 +13,7 @@ export default class Status {
         const todoInput = document.querySelectorAll('.todo-input');
         if (todoTask[index].classList.contains('active')) {
           todoInput[index].setAttribute('readOnly', true);
+          Haptics.vibrate();
         } else {
           todoInput[index].removeAttribute('readOnly');
         }
